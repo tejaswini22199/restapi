@@ -10,9 +10,14 @@ router.get('/',(req,res,next)=>
 });
 router.post('/',(req,res,next)=>
 {
+    const product={
+        name:req.body.name,
+        price:req.body.price
+    };
     res.status(200).json(
         {
-            message: 'product post'
+            message: 'product post',
+            endproduct: product
         }
     );
 });
